@@ -23,12 +23,10 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
 FROM alpine:3.18
 
 # Install runtime dependencies
-# Added wget alongside curl since I find it useful for quick debugging in the container
 RUN apk add --no-cache \
     ca-certificates \
     tzdata \
     curl \
-    wget \
     && rm -rf /var/cache/apk/*
 
 # Create non-root user for running seaweedfs
