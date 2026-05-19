@@ -55,6 +55,8 @@ EXPOSE 8888
 EXPOSE 8333
 # gRPC ports
 EXPOSE 19333 18080 18888
+# WebDAV port (useful for mounting as a network drive)
+EXPOSE 7333
 
 VOLUME ["/data"]
 
